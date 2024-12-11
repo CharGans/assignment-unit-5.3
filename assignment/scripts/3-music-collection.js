@@ -17,6 +17,7 @@ function addToCollection(collection, title, artist, yearPublished) {
     return album;
 };
 
+
 //added objects
 
 let albumZero = addToCollection(myCollection, 'Brat', 'Charli xcx', 2024);
@@ -25,6 +26,7 @@ let albumTwo = addToCollection(myCollection, 'Case study 01', 'Daniel Caeser', 2
 let albumThree = addToCollection(myCollection, 'Never Enough', 'Daniel Caeser', 2023);
 let albumFour = addToCollection(myCollection, 'This wasnt meant for you anyway', 'Lola Young', 2024);
 let albumFive = addToCollection(myCollection, 'Take me back to eden', 'Sleep Token', 2023);
+
 console.table(myCollection);
 //end of addToCollection function
 
@@ -33,12 +35,13 @@ console.table(myCollection);
 function showCollection(collection) {
   for (let index = 0; index < collection.length; index ++) {
     let album = collection[index]
-       console.log(`title: ${album.title}, artist: ${album.artist} year published: ${album.yearPublished}`);
+       console.log(`title: ${album.title}, artist: ${album.artist}, year published: ${album.yearPublished}`);
   }
 };
 
 showCollection(myCollection);
 //end showCollection function 
+
 
 
 //Function to find objects containing a specific element
