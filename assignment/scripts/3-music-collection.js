@@ -21,19 +21,29 @@ console.log(myCollection);
 let myCollection = [];
  
 function addToCollection(collection, title, artist, yearPublished) {
-    const item = {
+    const album = {
         title: title,
         artist: artist,
         yearPublished: yearPublished
     };
-   
-    collection.push(item);
-    return collection;
-}
 
-addToCollection(myCollection, 'Brat', 'Charli xcx', 2024);
+    collection.push(album);
+    return album;
+};
 
-console.log(myCollection);
+let albumZero = addToCollection(myCollection, 'Brat', 'Charli xcx', 2024);
+let albumOne = addToCollection(myCollection, 'Nurture', 'Porter Robinson', 2022);
+let albumTwo = addToCollection(myCollection, 'Case study 01', 'Daniel Caeser', 2019);
+let albumThree = addToCollection(myCollection, 'Never Enough', 'Daniel Caeser', 2023);
+let albumFour = addToCollection(myCollection, 'This wasnt meant for you anyway', 'Lola Young', 2024);
+let albumFive = addToCollection(myCollection, 'Take me back to eden', 'Sleep Token', 2023);
+console.table(myCollection);
+
+function showCollection(collection) {
+  
+};
+
+showCollection(myCollection);
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
