@@ -1,17 +1,39 @@
 console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
 
+/* first try
+
 let myCollection = [];
 
 function addToCollection(collection, title, artist, yearPublished) {
-   collection.push(collection, title, artist, yearPublished);
-     return collection;
+   collection['title'] = title;
+   collection['artist'] = artist;
+   collection['Year published'] = yearPublished;
+   return collection;
+};
+
+addToCollection(myCollection, 'Brat', 'Charli xcx', 2024);
+console.log(myCollection);
+*/ 
+
+//second try
+
+let myCollection = [];
+ 
+function addToCollection(collection, title, artist, yearPublished) {
+    const item = {
+        title: title,
+        artist: artist,
+        yearPublished: yearPublished
+    };
+   
+    collection.push(item);
+    return collection;
 }
 
-addToCollection(myCollection, 'Brat', 'Charli xcx', 2024)
+addToCollection(myCollection, 'Brat', 'Charli xcx', 2024);
 
 console.log(myCollection);
-
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
