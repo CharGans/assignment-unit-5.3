@@ -1,22 +1,8 @@
 console.log('***** Music Collection *****')
 // Safe Zone -- Write code below this line
 
-/* first try
 
-let myCollection = [];
-
-function addToCollection(collection, title, artist, yearPublished) {
-   collection['title'] = title;
-   collection['artist'] = artist;
-   collection['Year published'] = yearPublished;
-   return collection;
-};
-
-addToCollection(myCollection, 'Brat', 'Charli xcx', 2024);
-console.log(myCollection);
-*/ 
-
-//second try
+//Function to add objects to myCollection array
 
 let myCollection = [];
  
@@ -31,6 +17,8 @@ function addToCollection(collection, title, artist, yearPublished) {
     return album;
 };
 
+//added objects
+
 let albumZero = addToCollection(myCollection, 'Brat', 'Charli xcx', 2024);
 let albumOne = addToCollection(myCollection, 'Nurture', 'Porter Robinson', 2022);
 let albumTwo = addToCollection(myCollection, 'Case study 01', 'Daniel Caeser', 2019);
@@ -38,13 +26,35 @@ let albumThree = addToCollection(myCollection, 'Never Enough', 'Daniel Caeser', 
 let albumFour = addToCollection(myCollection, 'This wasnt meant for you anyway', 'Lola Young', 2024);
 let albumFive = addToCollection(myCollection, 'Take me back to eden', 'Sleep Token', 2023);
 console.table(myCollection);
+//end of addToCollection function
+
+//Function to console log specific collection and all objects inside
 
 function showCollection(collection) {
-  
+  for (let index = 0; index < collection.length; index ++) {
+    let album = collection[index]
+       console.log(`title: ${album.title}, artist: ${album.artist} year published: ${album.yearPublished}`);
+  }
 };
 
 showCollection(myCollection);
+//end showCollection function 
 
+
+//Function to find objects containing a specific element
+
+function findByArtist(collection, artist) {
+  let matchingResults = [];
+    for (let index = 0; index < collection.length; index ++) {
+      if (collection[index].artist === artist) {
+        matchingResults.push(collection[index]);
+      } 
+    }
+    return matchingResults;
+ };
+
+findByArtist(myCollection, 'Daniel Caeser');
+//end findArtist function
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
